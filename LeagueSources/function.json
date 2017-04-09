@@ -5,7 +5,12 @@
       "authLevel": "function",
       "name": "req",
       "type": "httpTrigger",
-      "direction": "in"
+      "direction": "in",
+      "methods": [
+        "post",
+        "put"
+      ],
+      "route": "leagues"
     },
     {
       "name": "$return",
