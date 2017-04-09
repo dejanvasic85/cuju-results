@@ -1,6 +1,6 @@
 # HttpTrigger - C<span>#</span>
 
-The `HttpTrigger` makes it incredibly easy to have your functions executed via an HTTP call to your function.
+The `HttpTrigger` is used to perform simple CRUD operations for league data that need to be monitored and scraped from the web.
 
 ## How it works
 
@@ -8,4 +8,4 @@ When you call the function, be sure you checkout which security rules you apply.
 
 ## Learn more
 
-<TODO> Documentation
+<TODO> More Documentation
