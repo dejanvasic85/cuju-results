@@ -7,8 +7,6 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
 
-    log.Info("Data posted: " + data);
-
     // Set name to query string or body data
 
     // return name == null
