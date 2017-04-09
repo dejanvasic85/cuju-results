@@ -2,16 +2,16 @@ using System.Net;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info("C# HTTP trigger function processed a request.");
+    var league  = await req.Content.ReadAsAsync<League>();
 
-    // Get request body
-    dynamic data = await req.Content.ReadAsAsync<object>();
+    log.Info($"Successfully read league data for {league.Title}");
 
-    // Set name to query string or body data
-
-    // return name == null
-    //     ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-    //     : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
+    // Todo - check whether it's a PUT OR POST and update or CREATE the league data
 
     req.CreateResponse(HttpStatusCode.OK);
+}
+
+public class League {
+    public string Title {get;set;}
+    public string Location {get;set;}
 }
