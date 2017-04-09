@@ -8,7 +8,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     // Todo - check whether it's a PUT OR POST and update or CREATE the league data
 
-    req.CreateResponse(HttpStatusCode.OK);
+    return req.CreateResponse(HttpStatusCode.OK);
 }
 
 public class League {
