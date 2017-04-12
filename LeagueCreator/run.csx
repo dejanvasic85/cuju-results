@@ -5,7 +5,8 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     var league = await req.Content.ReadAsAsync<League>();
     league.RowKey = Guid.NewGuid().ToString();
-
+    league.PartitionKey = "Leagues";
+    
     log.Info($"Creating new leage: {league.Title}");
 
     await leaguesTable.AddAsync(league);
@@ -15,6 +16,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
 public class League
 {
+    public string PartitionKey {get;set;}
     public string RowKey {get;set;}
     public string Title { get; set; }
     public string Location { get; set; }
