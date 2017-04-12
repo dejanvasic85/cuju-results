@@ -1,20 +1,26 @@
 {
-  "disabled": false,
-  "bindings": [
-    {
-      "authLevel": "function",
-      "name": "req",
-      "type": "httpTrigger",
-      "direction": "in",
-      "methods": [
-        "post"
-      ],
-      "route": "leagues"
-    },
-    {
-      "name": "$return",
-      "type": "http",
-      "direction": "out"
-    }
-  ]
+    "disabled": false,
+    "bindings": [{
+            "authLevel": "function",
+            "name": "req",
+            "type": "httpTrigger",
+            "direction": "in",
+            "methods": [
+                "post"
+            ],
+            "route": "leagues"
+        },
+        {
+            "name": "$return",
+            "type": "http",
+            "direction": "out"
+        },
+        {
+            "type": "table",
+            "name": "leaguesTable",
+            "tableName": "League",
+            "connection": "AzureWebJobsStorage",
+            "direction": "out"
+        }
+    ]
 }
