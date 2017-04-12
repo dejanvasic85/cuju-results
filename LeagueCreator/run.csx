@@ -4,7 +4,7 @@ using System;
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log, IAsyncCollector<League> leaguesTable)
 {
     var league = await req.Content.ReadAsAsync<League>();
-    league.Id = Guid.NewGuid();
+    league.Id = Guid.NewGuid().ToString();
 
     log.Info($"Creating new leage: {league.Title}");
 
