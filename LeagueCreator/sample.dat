@@ -1,10 +1,11 @@
 {
-    "title": "Victorian Premier League",
-    "division" : "1",
-    "level": "seniors",
-    "location" : "Australia/Victoria",
-    "url" : "http://www.foxsportspulse.com/comp_info.cgi?a=ROUND&round=-1&client=1-8746-0-200918-0&pool=1",
-    "footballAssociation" : "Football Federation Victoria",
-    "yearSpan" : "2015-2016",
-    "active" : true    
+	"title": "National Premier League",
+	"shortName" : "NPL",
+	"association" : "Football Federation Victoria",
+	"yearSpan" : "2017",
+	"url" : "http://websites.sportstg.com/comp_info.cgi?a=ROUND&round=-1&client=0-10178-0-435486-0&pool=1",
+	"location" : "Australia/Victoria",
+	"ageGroup" : "Seniors",
+	"division" : 1,
+	"gender" : "m"
 }
