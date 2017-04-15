@@ -1,6 +1,11 @@
-using System;
+#r "Microsoft.WindowsAzure.Storage"
+#load "..\DomainModels\League.csx"
 
-public static void Run(TimerInfo myTimer, TraceWriter log)
+using Microsoft.WindowsAzure.Storage.Table;
+
+public static void Run(TimerInfo timer, IQueryable<League> leagues, TraceWriter log)
 {
-    log.Info($"C# Timer trigger function executed at: {DateTime.Now}");    
+    var leaguesToQueue = leagues.Where(l => l.Enabled == true).ToList();
+    log.Info($"Queuing {leaguesToQueue.Count} for scraping");
+    
 }

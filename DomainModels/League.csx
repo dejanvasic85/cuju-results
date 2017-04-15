@@ -1,9 +1,9 @@
-#load "StorageModel.csx"
-
+#r "Microsoft.WindowsAzure.Storage"
+using Microsoft.WindowsAzure.Storage.Table;
 
 using System;
 
-public class League : StorageModel
+public class League : TableEntity
 {
     public bool Enabled { get; set; }
     public string Title { get; set; }
@@ -16,4 +16,6 @@ public class League : StorageModel
     public char Gender { get; set; }
     public int? Division { get; set; }
     public string Association { get; set; }
+
+    public DateTime CreatedDateUtc { get; set; }
 }
