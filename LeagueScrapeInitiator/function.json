@@ -16,7 +16,7 @@
     },
     {
       "name": "scrapeQueue",
-      "queueName": "scrapeLeagueQueue",
+      "queueName": "scrape-league",
       "type": "queue",
       "direction": "out"
     }
