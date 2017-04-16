@@ -13,6 +13,12 @@
       "tableName": "League",
       "direction": "in",
       "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "scrapeQueue",
+      "queueName": "scrapeLeagueQueue",
+      "type": "queue",
+      "direction": "out"
     }
   ]
 }
